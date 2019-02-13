@@ -1,0 +1,277 @@
+@font-face{
+	font-family: fonty-normal;
+	src: url('media/Roboto-Regular.ttf');
+}
+@font-face{
+	font-family: fonty-thin;
+	src: url('media/Roboto-Thin.ttf');
+}
+
+::selection{
+	background: #999999;
+}
+
+body{
+	background: #323232;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+/* change style button -------------------------------------------------------- */
+.style-button{
+	position: absolute;
+	left: 10px;
+	top: 10px;
+	background: url('media/on.png');
+	background-size: 90%;
+	background-position: center;
+	background-repeat: no-repeat;
+	width: 45px;
+	height: 30px;
+	transition: .1s;
+}
+.style-button:hover{
+	cursor: pointer;
+}
+/* input bar ------------------------------------------------------------------ */
+input{
+	font-family: fonty-thin;
+	font-size: 1.5em;
+	font-weight: 600;
+	text-align: center;
+	color: #787878;
+	padding: 10px;
+	border : none;
+	border-bottom: 2px solid #787878;
+	border-bottom-style: solid;
+	outline: none;
+	background: transparent;
+	width: 300px;
+	z-index: 10;
+	transition: .3s;
+}
+input:focus{
+	width: 625px;
+}
+/* ---------------------------------------------------------------------------- */
+.container{
+	width: 625px;
+	height: 400px;
+	border: 2px solid #787878;
+	font-family: fonty-normal;
+	color: #787878;
+}
+/* contents within container */
+.date-time, .todo-list, .help, .notes{
+	height: 0;
+	width: 100%;
+	visibility: hidden;
+	opacity: 0;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	
+} 
+.todo-list{
+	align-items: initial;
+	justify-content: initial;
+}
+/* all link menu stuff -------------------------------------------------------- */
+.links{
+	flex-direction: row;
+	height: 100%;
+	width: 100%;
+	visibility: visible;
+	opacity: 1;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	/* font-family:fonty-thin; */
+	/* font-weight: 600; */
+}
+a{
+	color: #787878;
+	text-decoration: none;
+	font-size: 1.2em;
+	transition: .2s;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 10px;
+	border: none;
+	border-bottom: 1px solid transparent;
+}
+a:after{
+  display:block;
+  content: '';
+  border-bottom: solid 1px #787878;  
+  transform: scaleX(0);  
+  transition: transform .1s ease-in-out;
+}
+a:hover:after{ 
+	transform: scaleX(1); 
+}
+a.fromRight:after{ 
+	transform-origin:100% 50%; 
+}
+a.fromLeft:after{  
+	transform-origin: 0% 50%; 
+}
+
+h2{
+	font-family: fonty-thin;
+	font-size: 1.4em;
+	text-decoration: underline;
+}
+.left-link, .right-link, .mid-link{
+	width: 50%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+/* all help menu stuff -------------------------------------------------------- */
+.help{
+	font-size: 1.1em;
+	display: flex;
+	flex-direction: row;
+}
+.help-left{
+	height: 95%;
+	width: 48%;
+}
+.help-right{
+	height: 95%;
+	width: 48%;	
+}
+/* time and date styling ------------------------------------------------------ */
+.time-area{
+	font-size: 2.5em;
+}
+.date-area{
+	font-family: fonty-thin;
+	font-weight: 600;
+	font-size: 2em;
+}
+/* all notes styling ---------------------------------------------------------- */
+textarea{
+	width: 100%;
+	height: 100%;
+	resize: none;
+	padding: 10px;
+	background: transparent;
+	font-family: fonty-normal;
+	font-size: 1.2em;
+	color: #787878;
+	outline: none;
+	border: none;
+}
+
+/* noscript ------------------------------------------------------------------- */
+noscript{
+	position: absolute;
+	font-family: fonty-thin;
+	color: red;
+	font-size: 2em;
+	top: 20px;
+}
+/* everything todo list ------------------------------------------------------- */
+.addMenu{
+	width: 100%;
+	height: 15%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+#todo-bar{
+	width: 100%;
+	border: none;
+	background: #292929;
+}
+#todo-add{
+	outline: none;
+	border: none;
+	background: #232323;
+	color: white;
+	padding: 17px;
+	transition: .2s;
+}
+#todo-add:hover{
+	cursor: pointer;
+	background: #202020;
+}
+.item-holder{
+	height: 100%;
+	width: 100%;
+	display: flex; 
+	flex-direction: column;
+	align-items: center;
+	/* //justify-content: center; */
+	overflow: auto;
+}
+.card{
+	background: #303030;
+	color: #787878;
+	width: 93%;
+	padding: 20px;
+	display: flex; 
+	word-wrap: normal;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	transition: .2s;
+	border: none;
+	border-bottom: 1px solid #232323;	
+	overflow: hidden;
+	min-height: 50px;
+}
+.card:hover{
+	cursor: pointer;
+	background: rgb(240, 50, 9, 0.05);
+}
+
+/* Code References ------------------------------------------------------------ */
+
+.code-references{
+	flex-direction: row;
+	height: 0%;
+	width: 100%;
+	visibility: hidden;
+	opacity: 0;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	/* font-family:fonty-thin; */
+	/* font-weight: 600; */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

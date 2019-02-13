@@ -1,0 +1,92 @@
+<html>
+	<head>
+		<title>Startpage</title>
+		<link id="pageStyle" href="style-dark.css" rel="stylesheet" type="text/css">
+	</head>
+	<body onbeforeunload="saveNotes(); saveTodoList();">
+		<div class="style-button" id="style-button" onclick="setTheme();"></div>
+		<input id="search" value="" placeholder="Google Search" type="input" spellcheck="false" autocomplete="off"/>
+		<br>
+		<div class="container" id="container">
+			<div class="links" id="links">
+				<div class="left-link" id="left-link">
+					<h2>General</h2>
+					<a href="https://www.youtube.com">																		Youtube</a>
+					<a href="https://www.hulu.com/">																		Hulu</a>
+					<a href="file:///C:/Users/davin/Desktop/Projects%20-%20Personal/4chan/index.html">						4chan</a>
+					<a href="https://www.netflix.com/browse">																Netflix</a>
+					<a href="https://www.amazon.com/">																		Amazon</a>
+					<a href="https://play.google.com/music/listen#/home">													Google Music</a>
+					<a href="https://outlook.live.com/mail/inbox">															Outlook</a>
+				</div>
+				<div class="mid-link" id="mid-link">
+					<h2>Code</h2>
+					<a href="http://www.cplusplus.com/">																	C++ Reference</a>
+					<a href="http://esprima.org/demo/validate.html">														JS Syntax Checker</a>
+					<a href="http://www.asciitable.com/">																	Ascii Table</a>
+					<a href="https://stackoverflow.com/">																	Stack Overflow</a>
+					<a href="https://files.000webhost.com/">																Web Host</a>
+					<a href="http://keycode.info/">																			Key Codes</a>
+					<a href="file:///C:/Users/davin/Desktop/number%20generation%20tool/index.html">							List Generator</a>
+				</div>
+				<div class="right-link" id="right-link">
+					<h2>School</h2>
+					<a href="https://www.ohio.edu/">																		Ohio University</a>
+					<a href="https://blackboard.ohio.edu/">																	Blackboard</a>
+					<a href="https://outlook.office.com/owa/?realm=ohio.edu">												Ohio Mail</a>
+					<a href="https://sis.ohio.edu/psp/csprd/EMPLOYEE/SA/c/SA_LEARNER_SERVICES.SSS_STUDENT_CENTER.GBL">		Schedule</a>
+					<a href="https://app.tophat.com/e">																		Top Hat</a>
+					<a href="https://www.ohio.edu/athens/parkingmapmedium.gif">												OU Map</a>
+					<a href="https://github.com/LeoGuagenti">																Github</a>
+					
+				</div>
+			</div>
+			<div class="date-time" id="date-time">
+				<div class="time-area" id="time-area"></div>
+				<div class="date-area" id="date-area"></div>
+			</div>
+			<div class="notes" id="notes">
+				<textarea id="note-container" placeholder="Your notes appear to be empty!" spellcheck="false"></textarea>
+			</div>
+			<div class="help" id="help">
+				<div class="help-right" id="help-right"></div>
+				<div class="help-left" id="help-left"></div>
+			</div>
+			<div class="todo-list" id="todo-list">
+				<div class="addMenu" id="addMenu">
+					<input id="todo-bar" value="" placeholder="to-do item" type="input" spellcheck="false" autocomplete="off"/>
+					<button id="todo-add" onclick="addItem()">add+</button>
+				</div>
+				<div class="item-holder" id="item-holder">
+					<!-- appended todo items go here -->
+				</div>
+			</div>	
+			<div class="code-references" id="code-references">
+				<div class="left-link" id="left-link">
+					<h2>C++</h2>
+					<a href="#">			placeholder</a>
+					<a href="#">			placeholder</a>
+					<a href="#">			placeholder</a>
+					<a href="#">			placeholder</a>
+				</div>
+				<div class="mid-link" id="mid-link">
+					<h2>Misc.</h2>
+					<a href="https://www.arduino.cc/reference/en/">							Arduino</a>
+					<a href="https://developer.twitter.com/en/apps/16020283">				Twitter Development</a>
+					<a href="#">			placeholder</a>
+					<a href="#">			placeholder</a>
+				</div>
+				<div class="right-link" id="right-link">
+					<h2>Python</h2>
+					<a href="https://www.w3schools.com/python/">							W3S Python</a>
+					<a href="https://automatetheboringstuff.com/chapter18/">				Pyautogui</a>
+					<a href="http://docs.tweepy.org/en/v3.5.0/api.html">					Tweepy</a>
+					<a href="#">			placeholder</a>
+				</div>
+			</div>
+		</div>
+		
+		<script src="script.js"></script>
+		<noscript>JavaScript is required for the page to function in it's entirety, silly!</noscript>
+	</body>
+</html>
